@@ -78,15 +78,16 @@ def i253():
 
     return resp
 
-@app.route('/shorterurl', methods=['GET', 'POST'])   
+@app.route('/shorterurl', methods=['GET'])   
 def shorterurl():
-    if request.method == 'GET':
-        return flask.render_template('shorterurl.html')
-    else:
-        URL = request.form.get('fullURL')
-        shortURL = flask.render_template('shortened', URL)
+    return (render_template('shorterurl.html'))
+
+
+@app.route('/confirmsubmission', methods=['POST'])
+        longURL = request.form.get('fullURL')
+        shorter = ('shorturl', URL)
         return(
-            'confirmsubmission.html'
+            render_template('confirmsubmission.html', URL=longURL, shortURL=shorter
         )
 
 if __name__ == "__main__":
