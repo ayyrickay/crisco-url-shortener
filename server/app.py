@@ -85,8 +85,8 @@ def shorterurl():
 
 @app.route('/confirmsubmission', methods=['POST'])
 def confirmsubmission():
-    longURL = request.form.get('fullURL')
-    shorter = ('shorturl', URL)
+    longURL = request.form['fullURL']
+    shorter = request.form['shorturl']
     return flask.render_template('confirmsubmission.html', URL=longURL, shortURL=shorter)
 
 if __name__ == "__main__":
