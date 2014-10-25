@@ -77,11 +77,19 @@ def i253():
     # resp.headers['Content-Type'] = '...'
 
     return resp
+<<<<<<< HEAD
 
 @app.route('/shorterurl', methods=['GET', 'POST'])    
+=======
+@app.route('/shorterurl', methods=['GET'])
+def shorterurl_get():
+    return flask.render_template('shorterurl.html')
+    
+@app.route('/shorterurl', methods=['POST'])
+>>>>>>> 33fbee2b7dba4ecb5a8df5620a586a6d8bab7121
 def shorterurl_post():
     URL = request.form.get('fullURL')
-    shortURL = request.form.get('shortened', URL)
+    shortURL = flask.render_template('shortened', URL)
     return(
         )
 
