@@ -80,14 +80,14 @@ def i253():
 
 @app.route('/shorterurl', methods=['GET'])   
 def shorterurl():
-    return (render_template('shorterurl.html'))
+    return flask.render_template('shorterurl.html')
 
 
 @app.route('/confirmsubmission', methods=['POST'])
 def confirmsubmission():
     longURL = request.form.get('fullURL')
     shorter = ('shorturl', URL)
-    return render_template('confirmsubmission.html', URL=longURL, shortURL=shorter)
+    return flask.render_template('confirmsubmission.html', URL=longURL, shortURL=shorter)
 
 if __name__ == "__main__":
     app.run(port=int(environ['FLASK_PORT']))
