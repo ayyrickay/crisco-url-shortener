@@ -88,8 +88,7 @@ def confirmsubmission():
     longURL = request.form.get('fullURL')
     shorter = ('shorturl', URL)
     return(
-        render_template('confirmsubmission.html', URL=longURL, shortURL=shorter
-    )
+        render_template('confirmsubmission.html', URL=longURL, shortURL=shorter)
 
 if __name__ == "__main__":
     app.run(port=int(environ['FLASK_PORT']))
