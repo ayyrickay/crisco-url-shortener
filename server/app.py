@@ -78,9 +78,7 @@ def i253():
 
     return resp
 
-@app.route('/shorterurl', methods=['GET', 'POST'])
-def shorterurl_get():
-    
+@app.route('/shorterurl', methods=['GET', 'POST'])    
 def shorterurl_post():
     URL = request.form.get('fullURL')
     shortURL = request.form.get('shortened', URL)
