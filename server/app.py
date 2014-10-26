@@ -83,7 +83,7 @@ def shorterurl():
     return flask.render_template('shorterurl.html')
 
 
-@app.route('/confirmsubmission', methods=['POST'])
+@app.route('/form_action', methods=['POST'])
 def confirmsubmission():
     longURL = request.form['fullURL']
     shorter = request.form['shorturl']
