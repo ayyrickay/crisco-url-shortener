@@ -3,7 +3,7 @@
 import shelve
 from subprocess import check_output
 import flask
-from flask import request
+from flask import request, Flask, render_template #This seems unneccessary
 from os import environ
 
 app = flask.Flask(__name__)
@@ -81,13 +81,13 @@ def i253():
 @app.route('/crisco_input', methods=['GET'])   
 def shorterurl():
     return flask.render_template('crisco_input.html')
-
-
+        
 @app.route('/form_action', methods=['POST'])
-def confirmsubmission():
-    longURL = request.form['fullURL']
-    shorter = request.form['shorturl']
-    return render_template('confirmsubmission.html', URL=longURL, shortURL=shorter)
+def form_action():
+    URL = request.form['full_url']
+    shortURL = request.form['url_code']
+    return render_template('form_action.html', URL=full_url, shortURL=url_code)
+
 
 if __name__ == "__main__":
     app.run(port=int(environ['FLASK_PORT']))

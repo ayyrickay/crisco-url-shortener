@@ -8,10 +8,10 @@
     </head>
     <body>
     	<h1>Welcome to the URL Shortener!</h1>
-		<form id="url-info" method="post" action="{{url_for('form_action')}}">
-			Full URL: <label for="full_url"><input type="text" name="full_url"></label>
+		<form id="url-info" method="post">
+			<label for="full_url">Full URL: <input type="text" name="full_url"></label>
 			<br>
-			Shortened Tag: <label for="url_code"><input type="text" name="url_code"></label>
+			<label for="url_code">Shortened Tag: <input type="text" name="url_code"></label>
 			<input type="submit" value="submit">
 		 </form>
 	</body>
