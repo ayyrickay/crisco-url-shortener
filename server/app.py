@@ -78,9 +78,9 @@ def i253():
 
     return resp
 
-@app.route('/shorterurl')   
+@app.route('/crisco_input', methods=['GET'])   
 def shorterurl():
-    return flask.render_template('shorterurl.html')
+    return flask.render_template('crisco_input.html')
 
 
 @app.route('/form_action', methods=['POST'])
