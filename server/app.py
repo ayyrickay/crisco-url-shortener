@@ -9,7 +9,7 @@ from os import environ
 app = flask.Flask(__name__)
 app.debug = True
 
-db = shelve.open("shorten.db")
+db = shelve.open("crisco.db")
 
 
 ###
@@ -78,15 +78,42 @@ def i253():
 
     return resp
 
+###
+#PROJECT STUFF
+###
+form_full_url = None
+form_url_code = None
+
 @app.route('/crisco_input', methods=['GET'])   
-def shorterurl():
+def form_method_handling(): #previously shorterurl
     return flask.render_template('crisco_input.html')
-        
-@app.route('/form_action', methods=['POST'])
-def form_action():
-    URL = request.form['full_url']
-    shortURL = request.form['url_code']
-    return render_template('form_action.html', URL=full_url, shortURL=url_code)
+
+@app.route('/shorts', methods=['POST'])
+def confirm_submission():
+    form_full_url = str(request.form.get('full_url')).strip() #previously request.form['full_url']
+    form_url_code = str(request.form.get('url_code')).strip() #flask does weird shit. Stringification?
+    db[form_url_code] = form_full_url
+    return flask.render_template('confirmation.html', input_full_url=form_full_url, input_url_code=form_url_code)
+
+@app.route('/short/<short_code>', methods=['GET'])
+def redirection(short_code=None):
+    short_code = str(short_code)
+    if db.has_key(short_code):
+        destination = db[short_code]
+        return flask.redirect(destination)
+    else:
+        return 404
+
+#@app.route('/crisco_input', methods=['GET', 'POST'])   
+#def form_method_handling(): #previously shorterurl
+#    if request.method == 'GET':
+#        return flask.render_template('crisco_input.html')
+#    else:
+#        form_full_url = str(request.form.get('full_url')).strip() #previously request.form['full_url']
+#        form_url_code = str(request.form.get('url_code')).strip() #flask does weird shit. Stringification?
+#        return flask.render_template('confirmation.html', input_full_url=form_full_url, input_url_code=form_url_code)
+#        #can return strings
+
 
 
 if __name__ == "__main__":

@@ -8,7 +8,8 @@
     </head>
     <body>
     	<h1>Welcome to the URL Shortener!</h1>
-		<form id="url-info" method="post">
+        <!-- Need to revisit action - automate relative path? -->
+		<form id="url-info" method="POST" action="/~ricky.holtz/server/shorts">
 			<label for="full_url">Full URL: <input type="text" name="full_url"></label>
 			<br>
 			<label for="url_code">Shortened Tag: <input type="text" name="url_code"></label>
