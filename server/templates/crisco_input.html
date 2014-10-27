@@ -5,6 +5,9 @@
         <title>Confirmation Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+        <!-- include jquery -->
+        <script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+        <script src="https://raw.githubusercontent.com/digitalBush/jquery.maskedinput/1.3.1/dist/jquery.maskedinput.js"></script>
     </head>
     <body>
     	<h1>Welcome to the Crisco URL Shortening-er!</h1>
@@ -12,8 +15,18 @@
 		<form id="url-info" method="POST" action="/~ricky.holtz/server/shorts">
 			<label for="full_url">Full URL: <input type="text" name="full_url"></label>
 			<br>
-			<label for="url_code">Shortened Tag: <input type="text" name="url_code"></label>
+            <label for="url_code">Shortened Tag: <input type="text" name="url_code" id="shorter"></label>
 			<input type="submit" value="submit">
-		 </form>
+		</form>
+
+        <!-- now do the sweet validation shit -->
+        <script>
+            $('document').ready(function() {
+                jQuery(function($){
+                    $("#shorter").mask("a?aaaaaaaaa", {placeholder:" "});
+
+                });
+            });
+        </script>
 	</body>
 </html>
