@@ -102,7 +102,7 @@ def redirection(short_code=None):
         destination = db[short_code]
         return flask.redirect(destination)
     else:
-        return 404
+        return flask.render_template('404.html')
 
 #@app.route('/crisco_input', methods=['GET', 'POST'])   
 #def form_method_handling(): #previously shorterurl
