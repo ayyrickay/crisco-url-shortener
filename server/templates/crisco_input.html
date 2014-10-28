@@ -1,19 +1,44 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>Confirmation Page</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width">
-    </head>
-    <body>
-    	<h1>Welcome to the Crisco URL Shortening-er!</h1>
-        <!-- Need to revisit action - automate relative path? -->
-		<form id="url-info" method="POST" action="/~ricky.holtz/server/shorts">
-			<label for="full_url">Full URL: <input type="text" name="full_url"></label>
-			<br>
-			<label for="url_code">Shortened Tag: <input type="text" name="url_code"></label>
-			<input type="submit" value="submit">
-		 </form>
-	</body>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Crisco URL Shortener</title>
+
+    <!--Google Webfont-->
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic|Oswald' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    <link href="static/css/crisco_input.css" rel="stylesheet">
+</head>
+<body>
+    <div class="row">
+        <div class="typography col-md-6">
+          <h1>WELCOME</h1>
+          <h2>to the crisco url shortening-er.</h2>
+          <p>enter the full url of a webpage and a short tag alongside it. we'll create a link that redirects to provided url. this page makes no sense.</p>
+      </div>
+  </div>
+  <!--form container-->
+  <div class="row">
+    <div class="form-container col-md-6 col-md-offset-3">
+        <form class="form-inline row" role="form" method="POST" action="/~ricky.holtz/server/shorts">
+
+            <div class="form-group">
+              <label class="form-label" for="full_url">full url:</label>
+              <input class="form-control"  type="text" name="full_url" placeholder="ex: http://example.com/">
+          </div><!-- end form group -->
+
+          <div class="form-group">
+              <label class="form-label" for="url_code">shorter tag:</label>
+              <input class="form-control"  type="text" name="url_code" placeholder="letters only, please!">
+          </div> <!-- end form group -->
+        <div class="form-group">
+            <input type="submit" class="btn btn-primary" value="submit">
+        </div><!--end form-group div-->
+    </div>
+</div>
+
+</body>
 </html>
