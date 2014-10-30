@@ -7,6 +7,10 @@ html{
     background-size:cover;
 }
 
+a{
+  color:#fee83d;
+}
+
 body{
   min-height:100%;
 }

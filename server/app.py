@@ -9,8 +9,9 @@ from os import environ
 app = flask.Flask(__name__)
 app.debug = True
 
-db = shelve.open("crisco.db")
-
+db = shelve.open("shorten.db")      # this is an artifact from jblomo's code
+urldb = shelve.open("urlkey.db")    # this is our database that uses url as a key
+codedb = shelve.open("codekey.db")  # this is our database that uses the short code as a key
 
 ###
 # Home Resource:
@@ -18,14 +19,7 @@ db = shelve.open("crisco.db")
 ###
 @app.route('/home', methods=['GET'])
 def home():
-    """Builds a template based on a GET request, with some default
-    arguements"""
-    index_title = request.args.get("title", "i253")
-    hello_name = request.args.get("name", "Jim")
-    return flask.render_template(
-            'home.html',
-            title=index_title,
-            name=hello_name)
+    return flask.redirect('http://people.ischool.berkeley.edu/~ricky.holtz/server/crisco')
 
 
 ###
@@ -76,29 +70,49 @@ def i253():
     return resp
 
 ###
-#PROJECT STUFF
+# global variables for use within various routes
 ###
 form_full_url = None
 form_url_code = None
 
+###
+# this is our input form for the shortener
+###
 @app.route('/crisco', methods=['GET'])   
-def form_method_handling(): #previously shorterurl
+def form_method_handling(): 
     return flask.render_template('crisco_input.html')
 
+###
+# when the crisco form is submitted, it sends a post to this route for processing
+###
 @app.route('/shorts', methods=['POST'])
 def confirm_submission():
     form_full_url = str(request.form.get('full_url')).strip() #previously request.form['full_url']
     form_url_code = str(request.form.get('url_code')).strip() #flask does weird shit. Stringification?
-    db[form_url_code] = form_full_url
-    return flask.render_template('confirmation.html', input_full_url=form_full_url, input_url_code=form_url_code)
+    if urldb.has_key(form_full_url):
+        # this is not a true confirmation - the user is informed that a code already exists
+        return flask.render_template('confirmation2.html', input_full_url=form_full_url, input_url_code=urldb[form_full_url])
+    elif codedb.has_key(form_url_code):
+        # this is not a true confirmation - the user is informed that the url has already been shortened
+        return flask.render_template('confirmation3.html', input_full_url=form_full_url, input_url_code=form_url_code)
+    else:
+        # this one is a true confirmation!
+        codedb[form_url_code] = form_full_url
+        urldb[form_full_url] = form_url_code
+        return flask.render_template('confirmation.html', input_full_url=form_full_url, input_url_code=form_url_code)
 
+###
+# this is the route that handles redirects when a user enters a short code as part of the url
+###
 @app.route('/short/<short_code>', methods=['GET'])
 def redirection(short_code=None):
     short_code = str(short_code)
-    if db.has_key(short_code):
-        destination = db[short_code]
+    if codedb.has_key(short_code):
+        # full url was found - redirect
+        destination = codedb[short_code]
         return flask.redirect(destination)
     else:
+        # full url not found - direct them to the sassy 404 page
         return flask.render_template('404.html')
 
 if __name__ == "__main__":
