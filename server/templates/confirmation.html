@@ -5,8 +5,24 @@
         <title>Confirmation Page</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width">
+
+    <!--Google Webfont-->
+    	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic|Oswald' rel='stylesheet' type='text/css'>
+
+    <!-- Bootstrap -->
+    	<link href="static/css/confirmation.css" rel="stylesheet">
     </head>
     <body>
-		<p> Submission Confirmed! {{input_full_url}} will be shortened to {{input_url_code}} </p>
+    	<div class="row">
+        <div class="typography col-md-6">
+    	<h1>Submission Confirmed</h1>
+		<p>{{input_full_url}} has been 'shortened' to
+			<br>
+			people.ischool.berkeley.edu/~ricky.holtz/server/short/{{input_url_code}}
+			<br>
+			copy and paste the link into your browser to test it out!
+			</p>
+		</div>
+	</div>
 	</body>
 </html>
