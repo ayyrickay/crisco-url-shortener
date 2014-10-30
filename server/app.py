@@ -52,9 +52,6 @@ def wiki_put():
 # i253 Resource:
 # Information on the i253 class. Can be parameterized with `relationship`,
 # `name`, and `adjective` information
-#
-# TODO: The representation for this resource is broken. Fix it!
-# Set the correct MIME type to be able to view the image in your browser
 ##/
 @app.route('/i253')
 def i253():
@@ -84,7 +81,7 @@ def i253():
 form_full_url = None
 form_url_code = None
 
-@app.route('/crisco_input', methods=['GET'])   
+@app.route('/crisco', methods=['GET'])   
 def form_method_handling(): #previously shorterurl
     return flask.render_template('crisco_input.html')
 
@@ -103,18 +100,6 @@ def redirection(short_code=None):
         return flask.redirect(destination)
     else:
         return flask.render_template('404.html')
-
-#@app.route('/crisco_input', methods=['GET', 'POST'])   
-#def form_method_handling(): #previously shorterurl
-#    if request.method == 'GET':
-#        return flask.render_template('crisco_input.html')
-#    else:
-#        form_full_url = str(request.form.get('full_url')).strip() #previously request.form['full_url']
-#        form_url_code = str(request.form.get('url_code')).strip() #flask does weird shit. Stringification?
-#        return flask.render_template('confirmation.html', input_full_url=form_full_url, input_url_code=form_url_code)
-#        #can return strings
-
-
 
 if __name__ == "__main__":
     app.run(port=int(environ['FLASK_PORT']))
