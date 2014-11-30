@@ -5,6 +5,8 @@ from subprocess import check_output
 import flask
 from flask import request, Flask, render_template #This seems unneccessary
 from os import environ
+import string
+import random
 
 app = flask.Flask(__name__)
 app.debug = True
@@ -12,6 +14,12 @@ app.debug = True
 db = shelve.open("shorten.db")      # this is an artifact from jblomo's code
 urldb = shelve.open("urlkey.db")    # this is our database that uses url as a key
 codedb = shelve.open("codekey.db")  # this is our database that uses the short code as a key
+
+###
+#Useful functions
+###
+def random_generator(size=6, chars=string.ascii_uppercase + string.digits):
+    return ''.join(random.choice(chars) for x in range(size))
 
 ###
 # Home Resource:
@@ -116,4 +124,4 @@ def redirection(short_code=None):
         return flask.render_template('404.html')
 
 if __name__ == "__main__":
-    app.run(port=int(environ['FLASK_PORT']))
+    app.run(debug=True)
