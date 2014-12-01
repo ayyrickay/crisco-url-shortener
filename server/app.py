@@ -4,7 +4,7 @@ import shelve
 from subprocess import check_output
 import flask
 from flask import request, Flask, render_template #This seems unneccessary
-from os import environ
+import os
 import string
 import random
 
@@ -27,7 +27,7 @@ def random_generator(size=6, chars=string.ascii_uppercase + string.digits):
 ###
 @app.route('/home', methods=['GET'])
 def home():
-    return flask.redirect('http://people.ischool.berkeley.edu/~ricky.holtz/server/crisco')
+    return flask.redirect(flask.url_for('form_method_handling'))
 
 
 ###
