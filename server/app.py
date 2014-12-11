@@ -124,9 +124,8 @@ def get_random_tag(in_url):
     if len(tag)==0:
         return ''
     else:
-        #return tag[0]
         return tag[0][0]
-        
+
 '''
 # ------------------------------------------
 # given a url, return the list of tags associated with it
