@@ -24,7 +24,7 @@
         <div class="typography">
           <h1>WELCOME</h1>
           <h2>to the crisco url shortening-er.</h2>
-          <p>enter the full url of a webpage and a short tag alongside it. we'll create a link that redirects to provided url.</p>
+          <p>enter the full url of a webpage and a short tag alongside it. we'll create a link that redirects to the provided url.</p>
         </div>
   <!--form container-->
         <div class="form-container">
@@ -32,7 +32,7 @@
             
                 <div class="form-group">
                     <label class="form-label" for="full_url">full url:</label>
-                    <input class="form-control"  type="text" name="full_url" placeholder="ex: http://example.com/">
+                    <input class="form-control" id="full_url" type="text" name="full_url" placeholder="ex: http://example.com/" required>
                 </div><!-- end form group -->
 
                 <div class="form-group">
@@ -41,7 +41,7 @@
                 </div> <!-- end form group -->
 
                 <div class="form-group">
-                    <input type="submit" class="btn btn-primary" value="submit">
+                    <input type="submit" name="submit" class="btn btn-primary" value="submit">
                 </div><!--end form-group div-->
                 </div>
             </form>
@@ -52,7 +52,6 @@
   $('document').ready(function() {
     jQuery(function($){
       $("#shorter").mask("a?aaaaaaaaa", {placeholder:" "});
-
     });
   });
   </script>
