@@ -10,17 +10,17 @@
     	<link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic|Cherry+Cream+Soda' rel='stylesheet' type='text/css'>
 
     <!-- Bootstrap -->
-    	<link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">
+    	<link href="/~ricky.holtz/server/static/css/main.css" rel="stylesheet">
     </head>
     <body>
     	<div class="splashwrapper">
-            <img src="../static/img/criscocan.svg" alt="Crisco logo">
+            <img src="../server/static/img/criscocan.svg" alt="Crisco logo">
         <div class="typography">
     	<h1>SORRY HUN,</h1>
 		<h2>THAT DOG DON'T HUNT!</h2>
         <br>
             <p>
-			{{input_url_code}} is already in use. get yourself back to <a href="{{url_for('form_method_handling')}}">crisco</a> to try some other shortening.
+			{{input_url_code}} is already in use. get yourself back to <a href="/~ricky.holtz/server/crisco">crisco</a> to try some other shortening.
 			</p>
 		</div>
 	</div>
