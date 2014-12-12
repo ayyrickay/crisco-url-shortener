@@ -1,0 +1,152 @@
+html{
+    /* code from tutorialzine fullscreen backgrounds */
+    background-color: #93d4ff;
+    background: url(../img/piebg.jpg) no-repeat center center fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+}
+
+body{
+    min-height:100%;
+    font-family: 'Josefin Sans', serif;
+    margin: 0;
+}
+
+h1, h2{
+  margin: 0;
+  text-align: center;
+}
+
+h1{
+    font-size: 96px;
+    font-family: 'Cherry Cream Soda', cursive;
+    color: #b20907;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+a{
+  color:#b20907;
+}
+
+p {
+  font-size: 18px;
+  font-weight: 300;
+  text-align: center;
+}
+
+.splashwrapper {
+    height: 50%;
+    width: 100%;
+    display: block;
+    padding: 5% 0 8% 0;
+}
+
+.splashwrapper img{
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
+.typography{
+    top: 20%;
+    margin: auto;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+}
+
+.form-control {
+  display: block;
+  width: 175px;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  color: #68696c;
+  background-color: #fff;
+  background-image: none;
+  border: 1px solid #68696c;
+  border-radius: 4px;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+  -webkit-transition: border-color ease-in-out .15s, -webkit-box-shadow ease-in-out .15s;
+       -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+          transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+.form-group {
+  display: inline-block;
+  padding-left: 50px;
+}
+
+.btn-primary,
+{
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, .2);
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+          box-shadow: inset 0 1px 0 rgba(255, 255, 255, .15), 0 1px 1px rgba(0, 0, 0, .075);
+}
+
+.btn {
+  margin-top: 10px;
+  padding: 6px 12px;
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1.42857143;
+  color: #fff;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  background-color: rgba(0,0,0,0);
+  border: 1px solid;
+  border-radius: 4px;
+}
+
+@media only screen and (max-width:640px), only screen and (max-device-width: 640px){
+
+    h1{
+      font-size: 48px;
+    }
+
+    h2{
+      font-size: 24px;
+    }
+    
+    .typography{
+        margin: 0 5% 0 5%;
+    }
+    
+    input.form_url .form-container .form-label .form-group{
+        width:100%;
+        display: inline;
+        padding: 0;
+    }
+    
+    .form-control{
+      width:100%;
+    }
+    
+    .form-label{
+      margin: auto;
+    }
+    
+    .form-group{
+      display: inline;
+      padding: 0;
+
+    }
+    
+    .btn{
+      padding: 6px 46%;
+    }
+      }
