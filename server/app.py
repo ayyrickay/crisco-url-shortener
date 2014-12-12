@@ -268,7 +268,7 @@ def redirection(short_code=None):
 connection.close()
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=int(environ['FLASK_PORT']))
     
 
 
