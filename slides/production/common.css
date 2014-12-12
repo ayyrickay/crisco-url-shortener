@@ -43,8 +43,8 @@ iframe, video {
    height: 650px;
 }
 
-img {
-   max-width: 100%;
+.splashwrapper img {
+   margin: auto;
 }
 
 table {

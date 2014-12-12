@@ -11,37 +11,42 @@
   <script src="{{url_for('static',filename='maskedinput.js')}}"></script>
 
   <!--Google Webfont-->
-  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,400italic|Oswald' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Cherry+Cream+Soda' rel='stylesheet' type='text/css'>
 
   <!-- Bootstrap -->
-  <link href="{{url_for('static', filename='css/crisco_input.css')}}" rel="stylesheet">
+  <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">
 </head>
+    
+<!-- Begin Body -->
 <body>
-  <div class="row">
-    <div class="typography">
-      <h1>WELCOME</h1>
-      <h2>to the crisco url shortening-er.</h2>
-      <p>enter the full url of a webpage and a short tag alongside it. we'll create a link that redirects to provided url.</p>
-    </div>
-  </div>
+    <div class="splashwrapper">
+        <img src="../static/img/criscocan.svg" alt="crisco logo">
+        <div class="typography">
+          <h1>WELCOME</h1>
+          <h2>to the crisco url shortening-er.</h2>
+          <p>enter the full url of a webpage and a short tag alongside it. we'll create a link that redirects to provided url.</p>
+        </div>
   <!--form container-->
-  <div class="form-container">
-    <form class="form-inline row" role="form" method="POST" action="{{ url_for('confirm_submission') }}">
+        <div class="form-container">
+            <form class="form-inline row" role="form" method="POST" action="{{ url_for('confirm_submission') }}">
+            
+                <div class="form-group">
+                    <label class="form-label" for="full_url">full url:</label>
+                    <input class="form-control"  type="text" name="full_url" placeholder="ex: http://example.com/">
+                </div><!-- end form group -->
 
-      <div class="form-group">
-        <label class="form-label" for="full_url">full url:</label>
-        <input class="form-control"  type="text" name="full_url" placeholder="ex: http://example.com/">
-      </div><!-- end form group -->
+                <div class="form-group">
+                    <label class="form-label" for="url_code">shorter tag:</label>
+                    <input class="form-control"  id="shorter" type="text" name="url_code" placeholder="letters only, please!">
+                </div> <!-- end form group -->
 
-      <div class="form-group">
-        <label class="form-label" for="url_code">shorter tag:</label>
-        <input class="form-control"  id="shorter" type="text" name="url_code" placeholder="letters only, please!">
-      </div> <!-- end form group -->
-      <div class="form-group">
-        <input type="submit" class="btn btn-primary" value="submit">
-      </div><!--end form-group div-->
+                <div class="form-group">
+                    <input type="submit" class="btn btn-primary" value="submit">
+                </div><!--end form-group div-->
+                </div>
+            </form>
+        
     </div>
-</form>
   <!-- now do the sweet validation shit -->
   <script>
   $('document').ready(function() {
