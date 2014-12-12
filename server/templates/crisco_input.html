@@ -13,14 +13,15 @@
   <!--Google Webfont-->
   <link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Cherry+Cream+Soda' rel='stylesheet' type='text/css'>
 
-  <!-- Bootstrap -->
-  <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">
+  <!-- local CSS 
+  <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">-->
+    <link href="/~ricky.holtz/server/static/css/main.css" rel="stylesheet">
 </head>
     
 <!-- Begin Body -->
 <body>
     <div class="splashwrapper">
-        <img src="../static/img/criscocan.svg" alt="crisco logo">
+        <img src="../server/static/img/criscocan.svg" alt="crisco logo">
         <div class="typography">
           <h1>WELCOME</h1>
           <h2>to the crisco url shortening-er.</h2>
@@ -28,7 +29,8 @@
         </div>
   <!--form container-->
         <div class="form-container">
-            <form class="form-inline row" role="form" method="POST" action="{{ url_for('confirm_submission') }}">
+            <form class="form-inline row" role="form" method="POST" action="/~ricky.holtz/server/shorts">
+<!--"{{ url_for('confirm_submission') }}"-->
             
                 <div class="form-group">
                     <label class="form-label" for="full_url">full url:</label>
