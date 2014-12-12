@@ -1,20 +1,16 @@
 #!/usr/bin/env python
 
-#import shelve
 import sqlite3
 from subprocess import check_output
 import flask
-from flask import request, Flask, render_template #This seems unneccessary
+# This seems unneccessary because of the above, but commenting it out raises errors
+from flask import request, Flask, render_template 
 import os
 import string
 import random
 
 app = flask.Flask(__name__)
 app.debug = True
-
-#urldb = shelve.open("urlkey.db")    # this is our database that uses url as a key
-#codedb = shelve.open("codekey.db")  # this is our database that uses the short code as a key
-
 
 ###
 # global variables for use within various routes
@@ -55,6 +51,7 @@ connection.close()
 # given a tag, return Y or N depending on whether it exists in the db
 # ------------------------------------------
 def tag_exists(in_tag):
+    print "in function tag_exists"
     connection = sqlite3.connect('crisco_db.txt')
     db_cursor = connection.cursor()
     db_cursor.execute("select tag from crisco where tag = ?", (str(in_tag),))
@@ -70,6 +67,7 @@ def tag_exists(in_tag):
 # given a url, return Y or N depending on whether it exists in the db
 # ------------------------------------------
 def url_exists(in_url):
+    print "in function url_exists"
     connection = sqlite3.connect('crisco_db.txt')
     db_cursor = connection.cursor()
     db_cursor.execute("select 'x' from crisco where url = ?", (str(in_url),))
@@ -85,6 +83,7 @@ def url_exists(in_url):
 # given a url and tag, return Y or N depending on whether there is a full match row
 # ------------------------------------------
 def full_match_exists(in_url,in_tag):
+    print "in function full_match_exists"
     connection = sqlite3.connect('crisco_db.txt')
     db_cursor = connection.cursor()
     db_cursor.execute("select 'x' from crisco where url = ? and tag = ?", (str(in_url),str(in_tag),))
@@ -100,7 +99,7 @@ def full_match_exists(in_url,in_tag):
 # given a single tag, return the url associated with it
 # ------------------------------------------
 def get_url(in_tag):
-    print "in get_url"
+    print "in function get_url"
     connection = sqlite3.connect('crisco_db.txt')
     db_cursor = connection.cursor()
     #print db_cursor.execute("select url from crisco where tag = ?", (str(in_tag)))
@@ -110,10 +109,29 @@ def get_url(in_tag):
     connection.close()
 
 # ------------------------------------------
+# find the existing random tag for a url, if one exists
+# ------------------------------------------
+def get_random_tag(in_url):
+    print "in function get_random_tag"
+    #   tag_list.append(str(row[0]))
+    connection = sqlite3.connect('crisco_db.txt')
+    db_cursor = connection.cursor()
+    db_cursor.execute("select tag from crisco where url = ? and random = 'Y'", (str(in_url),))
+    #tag_list = db_cursor.fetchall()
+    tag = db_cursor.fetchall()
+    connection.close()
+    
+    if len(tag)==0:
+        return ''
+    else:
+        return tag[0][0]
+
+'''
+# ------------------------------------------
 # given a url, return the list of tags associated with it
 # ------------------------------------------
 def get_tags(in_url):
-    print "in get_tags"
+    print "in function get_tags"
     #tag_list = []
     #for row in db_cursor.execute("select tag from crisco where url = ?", (str(in_url))):
     #   tag_list.append(str(row[0]))
@@ -123,12 +141,13 @@ def get_tags(in_url):
     tag_list = db_cursor.fetchall()
     connection.close()
     return tag_list
+'''
 
 # ------------------------------------------
 # given a short, url, and random flag, insert a new row (default random to N)
 # ------------------------------------------
 def insert_row(in_tag, in_url, in_random_flag='N'):
-    print "in insert_row"
+    print "in function insert_row"
     connection = sqlite3.connect('crisco_db.txt')
     db_cursor = connection.cursor()
     db_cursor.execute("insert into crisco values (?,?,'1',?)", (str(in_tag), str(in_url), str(in_random_flag),))
@@ -141,7 +160,7 @@ def insert_row(in_tag, in_url, in_random_flag='N'):
 # increment the popularity count for a tag/url combo
 # ------------------------------------------
 def update_popularity(in_tag):
-    print "in update_popularity"
+    print "in function update_popularity"
     connection = sqlite3.connect('crisco_db.txt')
     db_cursor = connection.cursor()
     db_cursor.execute("update crisco set popularity = popularity + 1 where tag = ?", (str(in_tag),))
@@ -150,38 +169,6 @@ def update_popularity(in_tag):
         print row[0] + ', ' + row[1]
     connection.close()
 
-# ------------------------------------------
-# 
-# ------------------------------------------
-def get_random_tag(in_url):
-    print "in get_random_tag"
-    #for row in db_cursor.execute("select tag from crisco where url = ?", (str(in_url))):
-    #   tag_list.append(str(row[0]))
-    connection = sqlite3.connect('crisco_db.txt')
-    db_cursor = connection.cursor()
-    db_cursor.execute("select tag from crisco where url = ? and random = 'Y'", (str(in_url),))
-    #tag_list = db_cursor.fetchall()
-    tag = db_cursor.fetchall()
-    connection.close()
-    
-    if len(tag)==0:
-        return ''
-    else:
-        return tag
-
-
-# ------------------------------------------
-# testing!
-# ------------------------------------------
-#print "get_url('rc') returns: " + str(get_url('rc'))
-#print get_tags('http://renacoen.com')
-#insert_row('az','http://amazon.com')
-#update_popularity('az')
-#for row in db_cursor.execute("select tag, url, popularity, random from crisco"):
-#   print row[0] +', '+ row[1] +', '+ row[2] +', '+  row[3]
-
-#print tag_exists('rc')
-#print url_exists('http://renacoen.com')
 
 #############################################################################
 # OTHER FUNCTIONS
@@ -191,6 +178,7 @@ def get_random_tag(in_url):
 # generate a random tag
 # ------------------------------------------
 def random_generator(size=6, chars=string.ascii_lowercase + string.digits):
+    print "in function random_generator"
     random_code = ''.join(random.choice(chars) for x in range(size))
     if tag_exists(random_code) == 'Y':
         # if the random tag magically exists in the db already
@@ -250,6 +238,8 @@ def confirm_submission():
 
     elif full_match_exists(form_full_url,form_url_code) == 'Y':
         # this is already in the db but let's let the user believe that we shortened it for them
+        # first we'll update the popularity
+        update_popularity(form_url_code)
         return flask.render_template('confirmation.html', input_full_url=form_full_url, input_url_code=form_url_code)
     elif tag_exists(form_url_code) == 'Y':
         # if a tag exists and we've fallen through to here, it is in the db for a diff url, so raise an error.
