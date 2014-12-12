@@ -149,7 +149,7 @@ def insert_row(in_tag, in_url, in_random_flag='N'):
     print "[FUNCTION] insert_row"
     connection = sqlite3.connect('crisco_db.txt')
     db_cursor = connection.cursor()
-    db_cursor.execute("insert into crisco values (?,?,'1',?)", (str(in_tag), str(in_url), str(in_random_flag),))
+    db_cursor.execute("insert into crisco values (?,?,'0',?)", (str(in_tag), str(in_url), str(in_random_flag),))
     connection.commit()
     #for row in db_cursor.execute("select tag, url, popularity, random from crisco"):
     #    print row[0] +', '+ row[1] +', '+ row[2] +', '+  row[3]
