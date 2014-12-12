@@ -1,50 +1,60 @@
 html{
     /* code from tutorialzine fullscreen backgrounds */
-    background:url('../img/canbg.svg') repeat;
     background-color: #93d4ff;
 }
 
-a{
-  color:#fee83d;
-}
-
 body{
-  min-height:100%;
+    min-height:100%;
+    font-family: 'Josefin Sans', serif;
+    margin: 0;
 }
 
 h1, h2{
-  color: #fff;
   margin: 0;
-  font-size: 96px;
-  font-family: 'Oswald', serif;
   text-align: center;
+}
+
+h1{
+    font-size: 96px;
+    font-family: 'Cherry Cream Soda', cursive;
+    color: #ea0f31;
 }
 
 h2 {
   font-size: 36px;
 }
 
+a{
+  color:#fee83d;
+}
+
 p {
-  color: #fff;
   font-size: 18px;
-  font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   text-align: center;
 }
 
+.splashwrapper {
+    height: 50%;
+    width: 100%;
+    display: block;
+    padding: 5% 0 8% 0;
+    margin-top: 10%;
+}
+
+.splashwrapper img{
+    display: block;
+    margin: 0 auto 0 auto;
+}
+
 .typography{
-  top: 20%;
-  margin: auto;
+    top: 20%;
+    margin: auto;
 }
 
 .form-container {
-  display: flex;
-  justify-content: center;
-}
-
-.form-label{
-  color: #fff;
-  font-family: 'Josefin Sans', sans-serif;
+    display: flex;
+    justify-content: center;
 }
 
 .form-control {
@@ -52,7 +62,6 @@ p {
   width: 175px;
   height: 34px;
   padding: 6px 12px;
-  font-family: 'Josefin Sans', sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   color: #68696c;
@@ -94,43 +103,45 @@ p {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  background-color: #68696c;
+  background-color: #664939;
   border: 1px solid transparent;
   border-radius: 4px;
 }
 
-@media only screen and (max-width:480px), only screen and (max-device-width: 480px){
-    html{
-      background: none;
-      background-color: #68696c;
-    }
+@media only screen and (max-width:640px), only screen and (max-device-width: 640px){
+
     h1{
-      font-size: 72px;
+      font-size: 48px;
     }
 
     h2{
       font-size: 24px;
     }
-    input.form_url{
-      width:100%;
+    
+    .typography{
+        margin: 0 5% 0 5%;
     }
-    .form-container{
-      display: inline;
-      width: 100%;
+    
+    input.form_url .form-container .form-label .form-group{
+        width:100%;
+        display: inline;
+        padding: 0;
     }
+    
     .form-control{
       width:93%;
     }
+    
     .form-label{
-      width: 100%;
       margin: auto;
     }
+    
     .form-group{
-      width: 100%;
       display: inline;
       padding: 0;
 
     }
+    
     .btn{
       padding: 6px 44%;
     }
