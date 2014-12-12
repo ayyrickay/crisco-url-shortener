@@ -17,13 +17,13 @@
             <img src="../static/img/criscocan.svg" alt="Crisco logo">
         <div class="typography">
     	<h1>Submission Confirmed</h1>
-		<p>{{input_full_url}}
+            <p>{{input_full_url}}
             <br>
             has been 'shortened' to
 			<br>
-			people.ischool.berkeley.edu/~ricky.holtz/server/short/{{input_url_code}}
+                <span style="color:#b20907">people.ischool.berkeley.edu/~ricky.holtz/server/short/{{input_url_code}}</span>
 			<br>
-			copy and paste the link into your browser to test it out!
+            copy and paste the link into your browser to test it, <br>or head back to <a href="{{url_for('form_method_handling')}}">crisco</a> to keep shortening!
 			</p>
 		</div>
 	</div>
