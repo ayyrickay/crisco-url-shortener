@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import sqlite3
 from subprocess import check_output
 import flask
