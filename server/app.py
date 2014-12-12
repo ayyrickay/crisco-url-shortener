@@ -4,7 +4,7 @@ from subprocess import check_output
 import flask
 # This seems unneccessary because of the above, but commenting it out raises errors
 from flask import request, Flask, render_template 
-import os
+from os import environ
 import string
 import random
 
