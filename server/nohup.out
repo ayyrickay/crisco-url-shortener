@@ -26518,3 +26518,36 @@ https://www.Rebelmouse.co127.0.0.1 - - [04/Apr/2015 01:12:39] "POST /shorts HTTP
 127.0.0.1 - - [05/Mar/2016 01:11:05] "GET /static/img/criscocan.svg HTTP/1.1" 200 -
 127.0.0.1 - - [05/Mar/2016 01:11:05] "GET /static/img/piebg.jpg HTTP/1.1" 200 -
 127.0.0.1 - - [05/Mar/2016 01:14:01] "GET /crisco HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2016 01:27:01] "GET /crisco HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2016 01:37:16] "GET /crisco HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2016 01:37:35] "GET /crisco HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2016 01:40:39] "GET /crisco HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2016 01:46:12] "GET /crisco HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2016 01:46:12] "GET /static/maskedinput.js HTTP/1.1" 304 -
+127.0.0.1 - - [05/Mar/2016 01:46:12] "GET /static/img/criscocan.svg HTTP/1.1" 304 -
+127.0.0.1 - - [05/Mar/2016 01:46:12] "GET /static/css/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [05/Mar/2016 01:46:12] "GET /static/img/piebg.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [05/Mar/2016 01:46:16] "GET /crisco HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2016 01:46:16] "GET /static/maskedinput.js HTTP/1.1" 304 -
+127.0.0.1 - - [05/Mar/2016 01:46:16] "GET /static/css/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [05/Mar/2016 01:46:16] "GET /static/img/criscocan.svg HTTP/1.1" 304 -
+127.0.0.1 - - [05/Mar/2016 01:46:16] "GET /static/img/piebg.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [05/Mar/2016 01:46:22] "GET /crisco HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2016 01:46:22] "GET /static/maskedinput.js HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2016 01:46:22] "GET /static/img/criscocan.svg HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2016 01:46:22] "GET /static/css/main.css HTTP/1.1" 200 -
+127.0.0.1 - - [05/Mar/2016 01:46:22] "GET /static/img/piebg.jpg HTTP/1.1" 200 -
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
+[APPROUTE] form_method_handling (GET)
