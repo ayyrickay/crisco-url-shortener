@@ -11,13 +11,13 @@
   <script src="static/maskedinput.js"></script>
 
   <!--Google Webfont-->
-  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Cherry+Cream+Soda' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Josefin+Sans|Quicksand' rel='stylesheet' type='text/css'>
 
-  <!-- local CSS 
+  <!-- local CSS
   <link href="{{url_for('static', filename='css/main.css')}}" rel="stylesheet">-->
     <link href="/~ricky.holtz/server/static/css/main.css" rel="stylesheet">
 </head>
-    
+
 <!-- Begin Body -->
 <body>
     <div class="splashwrapper">
@@ -25,15 +25,15 @@
         <div class="typography">
           <h1>WELCOME</h1>
           <h2>to the crisco url shortening-er.</h2>
-          <p>enter the full url of a webpage and a short tag alongside it. 
-we'll create a link that redirects to the provided url. leave the 
+          <p class="constrain-text">enter the full url of a webpage and a short tag alongside it.
+we'll create a link that redirects to the provided url. leave the
 shorter tag blank if you'd like us to generate a random one for you. </p>
         </div>
   <!--form container-->
         <div class="form-container">
             <form class="form-inline row" role="form" method="POST" action="/~ricky.holtz/server/shorts">
 <!--"{{ url_for('confirm_submission') }}"-->
-            
+
                 <div class="form-group">
                     <label class="form-label" for="full_url">full url:</label>
                     <input class="form-control" id="full_url" type="text" name="full_url" placeholder="ex: http://example.com/" required>
@@ -49,7 +49,7 @@ shorter tag blank if you'd like us to generate a random one for you. </p>
                 </div><!--end form-group div-->
                 </div>
             </form>
-        
+
     </div>
   <!-- now do the sweet validation shit -->
   <script>
