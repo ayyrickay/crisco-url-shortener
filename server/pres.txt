@@ -1,0 +1,148 @@
+[FUNCTION] full_match_exists
+[FUNCTION] print_db
+
+#####################################################################
+SHORT_TAG          HIT_CT RANDOM? FULL_URL
+------------------ ------ ------- -------------------------------
+3wskk9             1      Y       http://google.com              
+fb                 2      N       http://www.facebook.com        
+ggl                3      N       http://google.com              
+rc                 3      N       http://renacoen.com            
+spdq9v             1      Y       http://renacoen.com            
+twit               0      N       http://www.twitter.com         
+#####################################################################
+
+[APPROUTE] confirm_submission (POST) full match found
+ * Running on http://127.0.0.1:63017/
+ * Restarting with reloader
+127.0.0.1 - - [12/Dec/2014 13:41:41] "POST /shorts HTTP/1.1" 200 -
+127.0.0.1 - - [12/Dec/2014 13:41:41] "GET /static/css/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:41:41] "GET /static/img/criscocan.svg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:41:41] "GET /static/img/piebg.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:41:55] "POST /shorts HTTP/1.1" 200 -
+127.0.0.1 - - [12/Dec/2014 13:41:55] "GET /static/css/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:41:55] "GET /static/img/criscocan.svg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:41:55] "GET /static/img/piebg.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:42:12] "POST /shorts HTTP/1.1" 200 -
+127.0.0.1 - - [12/Dec/2014 13:42:12] "GET /static/css/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:42:12] "GET /static/img/criscocan.svg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:42:12] "GET /static/img/piebg.jpg HTTP/1.1" 304 -
+[FUNCTION] full_match_exists
+[FUNCTION] print_db
+
+#####################################################################
+SHORT_TAG          HIT_CT RANDOM? FULL_URL
+------------------ ------ ------- -------------------------------
+3wskk9             1      Y       http://google.com              
+fb                 2      N       http://www.facebook.com        
+ggl                3      N       http://google.com              
+rc                 3      N       http://renacoen.com            
+spdq9v             1      Y       http://renacoen.com            
+twit               0      N       http://www.twitter.com         
+#####################################################################
+
+[APPROUTE] confirm_submission (POST) full match found
+[FUNCTION] full_match_exists
+[FUNCTION] print_db
+
+#####################################################################
+SHORT_TAG          HIT_CT RANDOM? FULL_URL
+------------------ ------ ------- -------------------------------
+3wskk9             1      Y       http://google.com              
+fb                 2      N       http://www.facebook.com        
+ggl                3      N       http://google.com              
+rc                 3      N       http://renacoen.com            
+spdq9v             1      Y       http://renacoen.com            
+twit               0      N       http://www.twitter.com         
+#####################################################################
+
+[APPROUTE] confirm_submission (POST) full match found
+[FUNCTION] full_match_exists
+[FUNCTION] print_db
+
+#####################################################################
+SHORT_TAG          HIT_CT RANDOM? FULL_URL
+------------------ ------ ------- -------------------------------
+3wskk9             1      Y       http://google.com              
+fb                 2      N       http://www.facebook.com        
+ggl                3      N       http://google.com              
+rc                 3      N       http://renacoen.com            
+spdq9v             1      Y       http://renacoen.com            
+twit               0      N       http://www.twitter.com         
+#####################################################################
+
+[APPROUTE] confirm_submission (POST) full match found
+ * Running on http://127.0.0.1:63017/
+ * Restarting with reloader
+127.0.0.1 - - [12/Dec/2014 13:42:52] "POST /shorts HTTP/1.1" 200 -
+127.0.0.1 - - [12/Dec/2014 13:42:52] "GET /static/css/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:42:52] "GET /static/img/criscocan.svg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:42:52] "GET /static/img/piebg.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:43:06] "POST /shorts HTTP/1.1" 200 -
+[FUNCTION] full_match_exists
+[FUNCTION] print_db
+
+#####################################################################
+SHORT_TAG          HIT_CT RANDOM? FULL_URL
+------------------ ------ ------- -------------------------------
+3wskk9             1      Y       http://google.com              
+fb                 2      N       http://www.facebook.com        
+ggl                3      N       http://google.com              
+rc                 3      N       http://renacoen.com            
+spdq9v             1      Y       http://renacoen.com            
+twit               0      N       http://www.twitter.com         
+#####################################################################
+
+[APPROUTE] confirm_submission (POST) full match found
+[FUNCTION] full_match_exists
+[FUNCTION] print_db
+
+#####################################################################
+SHORT_TAG          HIT_CT RANDOM? FULL_URL
+------------------ ------ ------- -------------------------------
+3wskk9             1      Y       http://google.com              
+fb                 2      N       http://www.facebook.com        
+ggl                3      N       http://google.com              
+rc                 3      N       http://renacoen.com            
+spdq9v             1      Y       http://renacoen.com            
+twit               0      N       http://www.twitter.com         
+#####################################################################
+
+[APPROUTE] confirm_submission (POST) full match found
+ * Running on http://127.0.0.1:63017/
+ * Restarting with reloader
+127.0.0.1 - - [12/Dec/2014 13:46:04] "POST /shorts HTTP/1.1" 200 -
+127.0.0.1 - - [12/Dec/2014 13:46:04] "GET /static/css/main.css HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:46:04] "GET /static/img/criscocan.svg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:46:04] "GET /static/img/piebg.jpg HTTP/1.1" 304 -
+127.0.0.1 - - [12/Dec/2014 13:46:22] "POST /shorts HTTP/1.1" 200 -
+[FUNCTION] full_match_exists
+[FUNCTION] print_db
+
+#####################################################################
+SHORT_TAG          HIT_CT RANDOM? FULL_URL
+------------------ ------ ------- -------------------------------
+3wskk9             1      Y       http://google.com              
+fb                 2      N       http://www.facebook.com        
+ggl                3      N       http://google.com              
+rc                 3      N       http://renacoen.com            
+spdq9v             1      Y       http://renacoen.com            
+twit               0      N       http://www.twitter.com         
+#####################################################################
+
+[APPROUTE] confirm_submission (POST) full match found
+[FUNCTION] full_match_exists
+[FUNCTION] print_db
+
+#####################################################################
+SHORT_TAG          HIT_CT RANDOM? FULL_URL
+------------------ ------ ------- -------------------------------
+3wskk9             1      Y       http://google.com              
+fb                 2      N       http://www.facebook.com        
+ggl                3      N       http://google.com              
+rc                 3      N       http://renacoen.com            
+spdq9v             1      Y       http://renacoen.com            
+twit               0      N       http://www.twitter.com         
+#####################################################################
+
+[APPROUTE] confirm_submission (POST) full match found

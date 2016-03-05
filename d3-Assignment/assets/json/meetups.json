@@ -1,0 +1,138 @@
+{
+    "results":[
+        {
+            "lon":-122.41999816894531,
+            "member_count":60351,
+            "city":"San Francisco",
+            "lat":37.779998779296875
+        },
+        {
+            "lon":-121.48999786376953,
+            "member_count":31752,
+            "city":"Sacramento",
+            "lat":38.58000183105469
+        },
+        {
+            "lon":-121.9000015258789,
+            "member_count":24314,
+            "city":"San Jose",
+            "lat":37.38999938964844
+        },
+        {
+            "lon":-122.22000122070312,
+            "member_count":13524,
+            "city":"Oakland",
+            "lat":37.779998779296875
+        },
+        {
+            "lon":-122.1500015258789,
+            "member_count":6046,
+            "city":"Palo Alto",
+            "lat":37.439998626708984
+        },
+        {
+            "lon":-122.2699966430664,
+            "member_count":5844,
+            "city":"Berkeley",
+            "lat":37.869998931884766
+        },
+        {
+            "lon":-122.05000305175781,
+            "member_count":5800,
+            "city":"Mountain View",
+            "lat":37.40999984741211
+        },
+        {
+            "lon":-122.76000213623047,
+            "member_count":4983,
+            "city":"Santa Rosa",
+            "lat":38.45000076293945
+        },
+        {
+            "lon":-122.02999877929688,
+            "member_count":4763,
+            "city":"Sunnyvale",
+            "lat":37.369998931884766
+        },
+        {
+            "lon":-122.06999969482422,
+            "member_count":4755,
+            "city":"Walnut Creek",
+            "lat":37.869998931884766
+        },
+        {
+            "lon":-122,
+            "member_count":4082,
+            "city":"Fremont",
+            "lat":37.560001373291016
+        },
+        {
+            "lon":-122.31999969482422,
+            "member_count":3775,
+            "city":"San Mateo",
+            "lat":37.56999969482422
+        },
+        {
+            "lon":-121.95999908447266,
+            "member_count":3642,
+            "city":"Santa Clara",
+            "lat":37.349998474121094
+        },
+        {
+            "lon":-122.51000213623047,
+            "member_count":3192,
+            "city":"San Rafael",
+            "lat":37.970001220703125
+        },
+        {
+            "lon":-122.2699966430664,
+            "member_count":2260,
+            "city":"San Carlos",
+            "lat":37.4900016784668
+        },
+        {
+            "lon":-122.2300033569336,
+            "member_count":2107,
+            "city":"Redwood City",
+            "lat":37.459999084472656
+        },
+        {
+            "lon":-122.0199966430664,
+            "member_count":1819,
+            "city":"Concord",
+            "lat":37.95000076293945
+        },
+        {
+            "lon":-122.26000213623047,
+            "member_count":1808,
+            "city":"Alameda",
+            "lat":37.7599983215332
+        },
+        {
+            "lon":-122.04000091552734,
+            "member_count":1727,
+            "city":"Cupertino",
+            "lat":37.310001373291016
+        },
+        {
+            "lon":-121.95999908447266,
+            "member_count":1707,
+            "city":"Campbell",
+            "lat":37.279998779296875
+        }
+    ],
+    "meta":{
+        "next":"https:\/\/api.meetup.com\/2\/cities?offset=1&format=json&sig=ec1c05f645236acc36bb9d9364d3870a3a670a4e%22&only=lat%2Clon%2Ccity%2Cmember_count&photo-host=public&page=20&radius=50.0&sig_id=174707292&order=size&desc=false",
+        "method":"Cities",
+        "total_count":175,
+        "link":"https:\/\/api.meetup.com\/2\/cities",
+        "count":20,
+        "description":"Returns Meetup cities. This method supports search by latitude\/longitude\/radius, by country\/state, by query term\/zip, or a combination of all of these. Location-only searches by lat and lon return all cities within a radius of the provided coordinates. Searches with a query return up to 10 cities matching the term, and can be sorted by size or distance to a given coordinate. 'smart' ordering can be used to return the match(es) with the highest member_count, unless a smaller size match exists nearby the given coordinates. Query searches are supported for country but not country and state",
+        "lon":"",
+        "title":"Cities",
+        "url":"https:\/\/api.meetup.com\/2\/cities?offset=0&format=json&sig=ec1c05f645236acc36bb9d9364d3870a3a670a4e%22&only=lat%2Clon%2Ccity%2Cmember_count&photo-host=public&page=20&radius=50.0&sig_id=174707292&order=size&desc=false",
+        "id":"",
+        "updated":1263132740000,
+        "lat":""
+    }
+}
